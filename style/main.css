@@ -1,0 +1,63 @@
+body{
+    height: 1000px;
+    font-family: Arial;
+    text-align: center;
+}
+.mainDiv {
+    margin: 3% auto;
+    height: 50%;
+    width: 15%;
+}
+.list, .inputField{
+    border: 5px solid darkcyan;
+}
+.list {
+    margin: auto;
+    display: table;
+    table-layout: fixed;
+    width: 95%;
+    height: 90%;
+}
+.tr {
+    margin-bottom: 2px;
+}
+.td {
+    animation: fadein 2s;
+    display: table-cell;
+    height: 14px;
+    width: 1000px;
+}
+.tableInput{
+    display: flex;
+}
+.inputField{
+    margin-right: 4.5%;
+    flex: 5;
+    border-top: 0;
+    width: 70%;
+    outline:0;
+}
+.plus,.minus{
+    flex: 1;
+    font-weight: bold;
+    border-radius: 96%;
+    padding-top: 3px;
+}
+.plus:hover{
+    animation: spinner 0.7s linear infinite;
+}
+.minus:hover{
+    animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.tableInput div{
+    background-color: white;
+}
+.tableInput div:hover {
+    background-color: darkgrey;
+}
