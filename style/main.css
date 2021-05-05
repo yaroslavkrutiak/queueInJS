@@ -8,10 +8,10 @@ body{
     height: 50%;
     width: 15%;
 }
-.list, .inputField{
+.queue, .inputField{
     border: 5px solid darkcyan;
 }
-.list {
+.queue {
     margin: auto;
     display: table;
     table-layout: fixed;
