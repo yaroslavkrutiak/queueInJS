@@ -1,17 +1,17 @@
 const plus = document.getElementsByClassName('plus')[0],
     minus = document.getElementsByClassName('minus')[0],
     inputField = document.getElementsByClassName('inputField')[0],
-    lifo = document.getElementsByClassName('list')[0],
+    fifo = document.getElementsByClassName('queue')[0],
     li = document.getElementsByClassName('li');
 
-let savedLifo = sessionStorage.getItem('lifo');
+let savedLifo = sessionStorage.getItem('fifo');
 
 if (savedLifo) {
-    lifo.innerHTML = savedLifo;
+    fifo.innerHTML = savedLifo;
 }
 
 const saveLifoInStorage = () => {
-    sessionStorage.setItem('lifo', lifo.innerHTML);
+    sessionStorage.setItem('fifo', fifo.innerHTML);
 }
 
 const createHtmlComponent = (tag, content, className) => {
@@ -27,7 +27,7 @@ plus.onclick = () => {
         return alert('Oops! Maximum queue size reached, cause I\'m 19.');
     if (!inputField.value)
         return alert('Enter some text to enqueue it!');
-    lifo.appendChild(createHtmlComponent('li', inputField.value, 'li'));
+    fifo.appendChild(createHtmlComponent('li', inputField.value, 'li'));
     saveLifoInStorage();
     inputField.value = null;
     inputField.focus();
@@ -36,7 +36,7 @@ plus.onclick = () => {
 minus.onclick = () => {
     if (li.length === 0)
         return alert('Queue is empty. Nothing to delete.');
-    lifo.removeChild(lifo.firstElementChild);
+    fifo.removeChild(fifo.firstElementChild);
     saveLifoInStorage();
     inputField.focus();
 }
