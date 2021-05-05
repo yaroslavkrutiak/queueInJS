@@ -43,21 +43,6 @@ body{
     border-radius: 96%;
     padding-top: 3px;
 }
-.plus:hover{
-    animation: spinner 0.7s linear infinite;
-}
-.minus:hover{
-    animation: spinner 0.7s linear infinite;
-}
-
-@keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
-}
 .tableInput div{
     background-color: white;
-}
-.tableInput div:hover {
-    background-color: darkgrey;
 }
